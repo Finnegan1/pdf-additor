@@ -1,12 +1,10 @@
-name: Test GitHub Action
-on:
-  push:
-  pull_request:
+name: "Spell Check"
+on: [pull_request]
 
 jobs:
-  run:
+  typos:
     name: Spell Check with Typos
     runs-on: ubuntu-latest
     steps:
-    - name: Use custom config file
-      uses: crate-ci/typos@master
+    - uses: actions/checkout@v4
+    - uses: crate-ci/typos@v1.19.0
