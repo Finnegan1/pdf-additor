@@ -28,10 +28,9 @@ async function logout() {
     return result
 }
 
-
 export const auth = {
     loginEmail,
     registerEmail,
     resetPassword,
-    logout
+    logout,
 }
